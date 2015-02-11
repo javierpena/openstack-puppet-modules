@@ -195,7 +195,7 @@ Puppet::Type.type(:keystone_user).provide(
   end
 
   def instance(name)
-    @instances ||= instances.select { |instance| instance[:name] == name }.first || {}
+    @instances = instances.select { |instance| instance[:name] == name }.first || {}
   end
 
   def set_project(newproject)
